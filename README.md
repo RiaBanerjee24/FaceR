@@ -3,7 +3,7 @@
 Store images in ‘images’ folder, where each person’s images are stored in a folder of their own name, inside ‘images’ folder. Make sure you put approximately 30-35 pictures per person to get accurate results.
 Run <i><b>call_preprocess.py</b></i>  to create a ‘pre_images’ folder, which will have pre-processed images.
 Then run <i><b>face_recognizer.py</i></b> to start with face recognition. Press the key ‘n’ to scan another person’s face, and key ‘esc’ to exit the window. The attendance will be updated in the attendance table inside attendance.db database. The attendance table contains four columns, namely EmpName(name of the employee),Date, Status(Present or absent), and the time of entry. 
-To scan a new employee, run <i><b>scanner.py<b></i>. Answer the prompt, by entering the name of the new person. To take pictures, press the space bar, and do so for about 30-35 time to take pictures. After doing this, press the 'esc' key to properly exit the window.
+To scan a new employee, run <i><b>scanner.py</b></i>. Answer the prompt, by entering the name of the new person. To take pictures, press the space bar, and do so for about 30-35 time to take pictures. After doing this, press the 'esc' key to properly exit the window.
 <i> Head over to images/ImagesFilePath.png in this repository to see how the folder scheme of images before preprocessing looks </i>
 
 <h1>Techniques Used:</h1>
