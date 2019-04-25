@@ -2,12 +2,14 @@ import cv2
 import os
 
 def scan(emp_name):
-    face_cascade = cv2.CascadeClassifier(r"C:\Users\Ria\Desktop\RIA\BCA-Study\Sem VI\Software Development\FaceRecognition\Facial-Recognition-Using-FaceNet-Siamese-One-Shot-Learning-master\Facial-Recognition-Using-FaceNet-Siamese-One-Shot-Learning-master\haarcascades\haarcascade_frontalface_default.xml")
+    face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
 
     cap = cv2.VideoCapture(0)
     img_counter = 0
     while 1:
-        path = r"C:\Users\Ria\Desktop\RIA\BCA-Study\Sem VI\Software Development\FaceRecognition\Facial-Recognition-Using-FaceNet-Siamese-One-Shot-Learning-master\Facial-Recognition-Using-FaceNet-Siamese-One-Shot-Learning-master\images"+"\\"+emp_name
+        path = 'images/' + emp_name
+        if not os.path.exists(path):
+            os.makedirs(path)
         ret, img = cap.read()
 
         # convert to gray scale of each frames
@@ -41,3 +43,7 @@ def scan(emp_name):
     cap.release()
     cv2.destroyAllWindows()
     return True
+
+empname = input(str("Enter name: "))
+
+scan(emp_name=empname)
